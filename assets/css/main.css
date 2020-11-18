@@ -3010,6 +3010,10 @@ video {
 
 		}
 
+.notbold {
+	font-weight: normal;
+}
+
 /* Menu */
 
 	.navPanelToggle {
