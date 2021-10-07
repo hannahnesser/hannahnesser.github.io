@@ -2289,8 +2289,10 @@
 
 /* Video */
 video {
-	width: 100% !important;
+	width: 66% !important;
 	height: auto !important;
+	display: block;
+	margin: 0 auto;
 }
 
 /* Image */
@@ -2336,6 +2338,23 @@ video {
 			.image.fit img {
 				width: 100%;
 			}
+
+		.image.centered {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			/*margin: 0 0 2em 0;*/
+			width: 50%;
+			text-align: center;
+		}
+			.image.centered img {
+				width: 100%;
+				border: 20px solid #ffffff;
+/*				height: auto;
+				display: block;
+				margin: 0 0 2em 0;
+				text-align: center;
+*/			}
 
 		.image.rounded {
 			border-radius: 100%;
