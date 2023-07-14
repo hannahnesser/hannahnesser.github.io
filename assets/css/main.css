@@ -215,6 +215,14 @@
 
 	}
 
+/* New grid */
+
+	.grid {
+	  display: grid;
+	  gap: 1rem;
+	  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	}
+
 /* Grid */
 
 	.row {
@@ -1814,15 +1822,22 @@
 		color: #ffffff !important;
 		border: 0;
 		cursor: pointer;
-		display: inline-block;
+/*		display: inline-block;*/
 		font-weight: 700;
-		height: 3.15em;
-		line-height: 3.25em;
+/*		height: 3.15em;*/
+		line-height: 5em;
+/*		margin: auto;*/
 		padding: 0 2.2em;
 		text-align: center;
 		text-decoration: none;
 		text-transform: uppercase;
 		white-space: nowrap;
+		display: flex;
+		height: 100%;
+		width: 100%;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
 	}
 
 		input[type="submit"]:hover,
@@ -1862,9 +1877,16 @@
 		input[type="button"].fit,
 		button.fit,
 		.button.fit {
-			display: block;
-			margin: 0 0 1em 0;
-			width: 100%;
+			aspect-ratio: 1/1;
+			flex: 1 0 auto;
+			align-items: center;
+			justify-content: center;
+/*    		text-align: center;*/
+		}
+
+		.button.fit > img {
+			max-width: 80%;
+			max-height: 80%;
 		}
 
 		input[type="submit"].small,
@@ -2955,15 +2977,26 @@ video {
 			background-color: transparent;
 			border: 0;
 			box-shadow: none;
-			height: 3.25em;
+/*			height: 3.25em;
 			line-height: 3.25em;
 			position: absolute;
+*/			font-size: 1.25em;
+			height: 4.5em;
+			left: 0;
+			line-height: 4.4em;
+			position: absolute;
+			text-transform: uppercase;
+			top: 0;
+			width: 100%;
+			z-index: 10000;
+			z-index: 10001;
+
 		}
 
 			#header.alt h1 {
 				color: #ffffff;
-				left: 2.5em;
-				top: 2em;
+/*				left: 2.5em;*/
+/*				top: 2em;*/
 			}
 
 				#header.alt h1 a {
@@ -2971,8 +3004,8 @@ video {
 				}
 
 			#header.alt nav {
-				right: 2em;
-				top: 2em;
+/*				right: 2em;*/
+/*				top: 2em;*/
 			}
 
 				#header.alt nav a {
@@ -3029,8 +3062,16 @@ video {
 
 		}
 
-.notbold {
+.years {
 	font-weight: normal;
+	text-transform: none;
+}
+
+.location {
+	font-weight: normal;
+	text-transform: none;
+	text-align: right;
+	float: right;
 }
 
 /* Menu */
@@ -3206,6 +3247,11 @@ video {
 		background-position: center top;
 		background-size: cover;
 		line-height: 1.75;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 		text-align: center;
 	}
 
